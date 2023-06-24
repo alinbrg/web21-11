@@ -1,0 +1,173 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 1475px;
+	width: calc(100% - 24px);
+	margin: auto;
+}
+
+a {
+	text-decoration: none;
+}
+ul {
+	list-style-type: none;
+}
+
+/* header */
+header {
+	padding: 20px 0;
+	background-color: darkblue;
+}
+.header-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.logo img {
+	width: 50px;
+}
+
+.navbar ul {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+}
+
+.navbar a {
+	color: white;
+	font-size: 24px;
+}
+.burger {
+	display: none;
+}
+
+/* services */
+section {
+	margin: 50px 0;
+}
+.section-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.section-title h2 {
+	font-size: 32px;
+}
+.dots {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.dot {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: blue;
+}
+
+.images-wrapper {
+	display: flex;
+	gap: 20px;
+}
+.box {
+	display: flex;
+	gap: 10px;
+}
+.box img {
+	width: 40%;
+	height: 250px;
+	object-fit: cover;
+	flex-shrink: 0;
+}
+
+.cards-wrapper {
+	/* display: flex;
+	flex-wrap: wrap; */
+	gap: 10px;
+
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	/* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+}
+.item {
+	/* width: 100px; */
+	/* aspect-ratio: 1/1; */
+	height: 100px;
+	border: 5px solid red;
+	background-color: blueviolet;
+}
+
+/* 1200 */
+/* 1024 */
+/* 768 */
+
+@media (min-width: 768px) {
+	/* > 768 */
+}
+@media (min-width: 1024px) {
+	/* > 1024 */
+}
+
+@media (max-width: 1024px) {
+	.cards-wrapper {
+		grid-template-columns: 1fr 1fr;
+	}
+	nav {
+		display: none;
+	}
+	.burger {
+		display: block;
+		color: white;
+		font-size: 24px;
+	}
+	.images-wrapper {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 768px) {
+	.cards-wrapper {
+		grid-template-columns: 1fr;
+	}
+	.box {
+		flex-direction: column;
+	}
+	.item {
+		background-color: darkcyan;
+	}
+	.box img {
+		width: 100%;
+	}
+}
+
+@media (width <= 1024px) {
+}
+@media (width >= 1024px) {
+}
+
+/* @media (0 < width < 1024px) {
+} */
+/* 
+@media (orientation: portrait) {
+	body {
+		background-color: aqua;
+	}
+}
+@media (orientation: landscape) {
+	body {
+		background-color: lightcoral;
+	}
+} */
+
+/* @media (prefers-color-scheme: dark) {
+	body {
+		background-color: black;
+		color: white;
+	}
+} */
